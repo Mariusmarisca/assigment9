@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>assigment9</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="UTF-8">
+        <meta name="description" content="responsiveness,layout">
+        <link href="bundles/font-awesome/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="resources/main.css">
+    </head> 
+    <body>
+        <div class="container">
+            <header>
+                <nav>
+                    <a href="#">HOME</a>
+                    <a href="#">ABOUT US</a>
+                    <a href="#">PROJECTS</a>
+                    <a href="#">BLOG</a>
+                    <a href="#">CONTACT US</a> 
+                    <!--Aici am inserat pentru partea de mobile-->
+                    <div class="menu">
+                        <i class="fas fa-bars"></i>
+                    </div>  
+                </nav>
+                <div class="black-box">
+                    <h2>go.arch</h2>
+                    <div class="font-awesome">
+                       <div class="border"></div>
+                       <i class="fab fa-instagram-square"></i>
+                       <i class="fab fa-facebook-f"></i>
+                    </div>
+                </div>  
+                <h1>PROJECTS</h1>
+            </header>
+            <div class="content">
+                <div class="gallery-wrapper">
+                    <img src="assets/concert-hall.jpg">
+                    <p>CONCERT HALL IN <span>NEW YORK</span></p>
+                    <p>ARCHITECTURE</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="assets/bedroom-1.jpg">
+                    <p>MODERN BEDROOM <span>IN GORIZIA</span></p>
+                    <p>INTERIOR</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="assets/hotel.jpg">
+                    <p>MODERN HOTEL <span>IN LONDON</span></p>
+                    <p>ARCHITECTURE</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="assets/bedroom-2.jpg">
+                    <p>MODERN BEDROOM <span>IN PARIS</span></p>
+                    <p>INTERIOR</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="assets/library.jpg">
+                    <p>MODERN LIBRARY <span>IN CHICAGO</span></p>
+                    <p>ARCHITECTURE</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <img src="assets/kitchen.jpg">
+                    <p>MODERN KITCHEN <span>IN BUCHAREST</span></p>
+                    <p>INTERIOR</p>
+                </div>
+            </div>
+            <footer>
+                <button type="button">MORE PROJECTS</button>
+                <p><string style="color:white">GET</string> IN TOUCH</p>
+                <div class="contact">
+                    <div class="part1">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </form>
+                <form>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone">
+                </form>
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </form>
+                <form>
+                    <label for="company">Company</label>
+                    <input type="text" id="company">
+                </form>
+                    </div>
+                <form>
+                    <label for="message">Message</label>
+                    <input type="text" id="message">
+                </form>
+                </div>
+                <form class="send">
+                    <input type="submit" value="SEND &#8594">
+                </form>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,160 @@
+* {box-sizing: border-box;}
+html, body {width:100%;
+            height:100%;
+            margin:0;
+            padding:0}
+.container {width:100%;
+            height:auto;
+            font-family:"Open Sans,Skia",sans-serif}
+header {background-image: url(../assets/bg-header.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+         width:100%;
+          height:350px;
+          position: relative;}
+.black-box {background-color: #2b2b2b;
+           width:30%;
+           font-size:20px;
+           padding:20px;
+           color:#3d3d3d;
+           text-align: center}
+.black-box h2 {
+           margin-left: 40px;}
+header h1 { position: absolute;
+            color:white;
+            padding:50px;
+            font-size:50px;
+            letter-spacing: 10px;
+            right:30px;
+            bottom:40px}
+.black-box i{color:#3d3d3d;
+             margin-top:10px}
+.font-awesome {display: flex;
+               flex-direction: column;
+              width:10%;
+               align-items: center;}
+.border {border:1px solid #3d3d3d;
+         width:40px;
+         transform:rotate(90deg);
+         margin-bottom: 20px;
+         }
+ nav  {width:70%;
+      height:auto;
+       float: right;
+     text-align: center;
+      margin-top:20px;
+      position: relative;}
+nav a {text-decoration: none;
+      color:white;
+      margin-right:30px;
+      font-size:20px;
+       }
+.menu i {color:#3d3d3d;
+       font-size:30px;
+        position: absolute;
+        top:10px;
+        right:20px;
+         display: none;}
+.content {width:100%;
+          height:100%;
+          display: flex;
+          flex-wrap: wrap;
+          position: relative;
+          margin:0}
+.gallery-wrapper {width:33.3%;
+                  height:500px;
+                  position: relative;
+                  }
+.gallery-wrapper img {width:100%;
+                      height:100%;
+                      opacity:0.7;
+                      }
+.gallery-wrapper p:first-of-type {position: absolute;
+                    top:5px;
+                     color:white;
+                     padding-left:20px;
+                    font-size: 18px;}
+.gallery-wrapper p:nth-of-type(2) 
+    {position: absolute;
+    color:white;
+    bottom:30px;
+    padding-bottom:30px;
+    margin-bottom: 30px;
+    transform:rotate(-90deg);
+    font-size:18px;}
+footer {background-color: #2b2b2b;
+        color:white;
+        text-align:center;
+        }
+.contact {display: flex;
+         flex-wrap: wrap;
+         margin:0 30px;
+        }
+.contact form {display: flex;
+              background-color: #3d3d3d;
+               margin:10px 0 10px 10px;
+              padding:20px;
+              width:300px;
+              font-size:18px}
+.contact input {background-color: transparent;
+               border:none;
+               margin-left:5px;}
+footer p {font-size:50px;
+             color:#c09c78;
+              text-align: center;}
+.part1{display: flex;
+       flex-wrap: wrap;
+        justify-content:flex-end;
+        width:60%}
+footer button {color:white;
+               background-color: #3d3d3d;
+               border-radius: 10px;
+               padding:10px 20px;
+               border:none;
+              margin:40px 0;
+               font-size:18px}
+.send input{color:white;
+       background-color: #c09c78;
+       padding:10px 40px;
+       margin:40px 0;
+        border-radius: 10px;
+        border:none;
+        font-size:18px}
+@media (max-width:599px){
+      nav a {display: none;}
+      .menu i{display: block;}
+      .black-box h2 {margin-left:10px}
+      header h1 {bottom:5px;
+                 padding:0;
+                 left:15%}
+      .gallery-wrapper {width:100%}
+      .gallery-wrapper p:first-of-type {text-align: center;
+                                        top:30%;
+                                        right:0;
+                                        left:0;
+                                        font-size:28px;
+                                        }
+      .gallery-wrapper span{color:#c09c78}
+      .gallery-wrapper p:nth-of-type(2) {width:100%;
+                                         text-align: center;
+                                         font-size:26px;
+                                         transform:rotate(0);
+                                         padding:0;
+                                         margin:0;
+                                         top:50%;
+                                    }
+      footer {text-align: right;
+             }
+      footer button {display:none}
+      footer p {margin:0 0 20px 0;
+               padding-top:40px;
+               }
+      .contact form {width:100%;
+                    margin:10px 0px}
+      .part1 {width:100%;
+              flex-direction: column;
+              }
+      .send input {margin-right:10px}
+}
+
+
