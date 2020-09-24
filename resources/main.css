@@ -66,6 +66,7 @@ nav a {text-decoration: none;
                   position: relative;
                   }
  /*aici nu stiu cum sa fac sa fie imaginea mai stearsa si sa se vada textul mai proeminent*/
+ /* putem pune un layer deasupra la care sa ii dam un opacity de 0.3, 0.5, dar avem nevoie si de z-index si de pozitionare sa fie exact una deasupra celeilalte */
 .gallery-wrapper img {width:100%;
                       height:100%;
                       opacity:0.7;

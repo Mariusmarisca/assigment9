@@ -23,6 +23,7 @@
                     </div>  
                 </nav>
                 <div class="black-box">
+                    <!-- go.arch nu este centrat, puteai sa folosesti pozitionarea sa il pozitionezi la dreapta de linia verticala -->
                     <h2>go.arch</h2>
                     <div class="font-awesome">
                        <div class="border"></div>
@@ -35,6 +36,7 @@
             <div class="content">
                 <div class="gallery-wrapper">
                     <img src="assets/concert-hall.jpg">
+                    <!-- daca te uiti in layout  locatia este pe un rand separat, nu in continuarea descrierii -->
                     <p>CONCERT HALL IN <span>NEW YORK</span></p>
                     <p>ARCHITECTURE</p>
                 </div>
@@ -66,30 +68,35 @@
             </div>
             <footer>
                 <button type="button">MORE PROJECTS</button>
+                <!-- <string>? avem documentatie pentru tagul asta? inline CSS? -->
+                <!-- puteai sa optezi pentru un span aici sa izolezi doar cuvantul asta -->
                 <p><string style="color:white">GET</string> IN TOUCH</p>
+                <!-- se strica layout-ul, ti-am atasat screenshot sa vezi ce se intampla la mine -->
                 <div class="contact">
                     <div class="part1">
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
-                </form>
-                <form>
-                    <label for="phone">Phone</label>
-                    <input type="text" id="phone">
-                </form>
-                <form>
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                </form>
-                <form>
-                    <label for="company">Company</label>
-                    <input type="text" id="company">
-                </form>
+                        <!-- nu avem un form pt fiecare input sau buton, ci un un singur for pentru toate valorile ce vor fi trimise la server ulterior -->
+                        <form>
+                            <!-- ceea ce vezi tu in layout e un placeholder, nu un label. label-ul e ok sa il pui pt accesibilitate, dare trebuie ascuns cu display: none in css -->
+                            <label for="name">Name</label>
+                            <input type="text" id="name">
+                        </form>
+                        <form>
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone">
+                        </form>
+                        <form>
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </form>
+                        <form>
+                            <label for="company">Company</label>
+                            <input type="text" id="company">
+                        </form>
                     </div>
-                <form>
-                    <label for="message">Message</label>
-                    <input type="text" id="message">
-                </form>
+                    <form>
+                        <label for="message">Message</label>
+                        <input type="text" id="message">
+                    </form>
                 </div>
                 <form class="send">
                     <input type="submit" value="SEND &#8594">
