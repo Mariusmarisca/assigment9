@@ -130,10 +130,9 @@ footer button {color:white;
         border-radius: 10px;
         border:none;
         font-size:18px}
-.mobile-menu {display:none;}
+.mobile-menu {display:none;
+              }
 @media (max-width:599px){
-       .container {z-index:2;
-                   }
       nav a {display: none;}
       .menu i{display: block;
               cursor: pointer;}
@@ -174,13 +173,14 @@ footer button {color:white;
       .part1 {width:100%;
               }
       .send input {margin-right:20px}
-      .mobile-menu {display:block;
+      .mobile-menu    { display:block;
                     position: absolute;
                    width:100%;
-                     height:auto;
+                     height:100%;
                      background-color: #2b2b2b;
                     color:white;
-                     top:0}
+                     top:0;
+                     z-index:2}
        .close-button {width:50px;
                       height:50px;
                      position: absolute;
@@ -199,16 +199,16 @@ footer button {color:white;
                                margin-bottom: 10px;}
        .mobile-menu section a:hover {color: white;}
        table, th {width:100%;
+                  height:auto;
                    border:1px solid #3d3d3d;
                    border-collapse: collapse;
-                   padding:40px}
+                   padding:40px;
+                   background-color: #2b2b2b;}
        table th {width:50%}
        table i {font-size:25px;
               color:#3d3d3d;
               }
-       .hidden {z-index:100;
-                display:none;}
-       
+       .hidden {display:none;}
 }
 
 
