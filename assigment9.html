@@ -88,38 +88,44 @@
                             <input type="text" id="message" placeholder="Message">
                         </form>
                 </div>
+                <!-- inca un form? butonul trebuie sa faca parte din singurul form care ar trebuie sa il ai pe pagina. de el te vei lega sa trimiti datele. daca le ai separate, cu al 2 lea ce anume trimiti? iar cu primul cum trimiti? -->
                 <form class="send">
                     <input type="submit" value="SEND">
                 </form>
             </footer>
         </div>
 
+        <!-- mare atentie la identatie, te rog -->
         <section id="MobileMenu" class="hidden">
-        <div class="mobile-menu">
-            <div class="top-menu">
-            <h2>go.arch</h2>
-            <section id="CloseButton">
-            <div class="close-button">
-                <img src="assets/icon-close.png" alt="close">
+            <div class="mobile-menu">
+                <div class="top-menu">
+                    <h2>go.arch</h2>
+                    <!-- sectiunile sunt menite sa contina sectiuni amble de layout, o simpla iconita sau button nu este deloc continut amplu, un simplu div ajungea -->
+                    <section id="CloseButton">
+                        <div class="close-button">
+                            <img src="assets/icon-close.png" alt="close">
+                        </div>
+                    </div>
+                    <!-- aici are sens sa fie un nav, nicidecum un section -->
+                    <section>
+                        <a href="#">Home</a>
+                        <a href="#">About us</a>
+                        <a href="#">Projects</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact us</a>
+                    </section>
+                    <!-- layout folosind table? de ce? cand un simplu flex sau inline-block ti-ar rezolva problema -->
+                    <!-- pe langa asta nu este pozitionat in josul paginii, recomand tehnica absolut fata de parinte relativ -->
+                    <table>
+                        <th>
+                        <i class="fab fa-instagram-square"></i>
+                        </th>
+                        <th>
+                        <i class="fab fa-facebook-f"></i>
+                        </th>           
+                    </table>
             </div>
-            </div>
-            <section>
-                <a href="#">Home</a>
-                <a href="#">About us</a>
-                <a href="#">Projects</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact us</a>
-            </section>
-            <table>
-                <th>
-                <i class="fab fa-instagram-square"></i>
-                </th>
-                <th>
-                <i class="fab fa-facebook-f"></i>
-                </th>           
-            </table>
-        </div>
-    </section>
+        </section>
     <script src="resources/index.js"></script>
     </body>
 </html>
