@@ -1,14 +1,20 @@
-const seeMenuButton = document.getElementById('MenuButton');
+const seeMenuButton = document.getElementById('menuButton');
 // ori incep toate cu litera mica, ori toate cu litera mare, nu mixte te rog. recomandarea este ca variabilele sa inceapa cu litera mica, dar eu promovez consistenta
-const MobileMenu = document.getElementById('MobileMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+const layerWrapper= document.getElementById('layer');
+const containerWrapper=document.getElementById('container')
 seeMenuButton.addEventListener('click', function(){
     console.log('click');
-  MobileMenu.classList.remove('hidden');  
+  mobileMenu.classList.remove('hidden'); 
+  layerWrapper.classList.add('hidden'); 
+  containerWrapper.classList.add('hidden');
 }
 )
-const seeCloseButton = document.getElementById('CloseButton');
+const seeCloseButton = document.getElementById('closeButton');
  seeCloseButton.addEventListener('click', function() {
    console.log('click');
-   MobileMenu.classList.add('hidden');
+   mobileMenu.classList.add('hidden');
+   layerWrapper.classList.remove('hidden');
+   containerWrapper.classList.remove('hidden');
  }
  )

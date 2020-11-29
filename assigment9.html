@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="UTF-8">
         <meta name="description" content="responsiveness,layout">
+        <link rel="stylesheet" href="bundles/bootstrap-4.5.3-dist/css/bootstrap.css">
         <link href="bundles/font-awesome/css/all.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="resources/main.css">
     </head> 
     <body>
-        <div class="container" id="Container">
+        <div class="container" id="container">
             <header>
                 <nav>
                     <a href="#">HOME</a>
@@ -19,11 +20,10 @@
                     <a href="#">CONTACT US</a> 
                     <!--Aici am inserat pentru partea de mobile-->
                     <div class="menu">
-                        <i id="MenuButton" class="fas fa-bars"></i>
+                        <i id="menuButton" class="fas fa-bars"></i>
                     </div>  
                 </nav>
-                <div class="black-box">
-                    <!-- go.arch nu este centrat, puteai sa folosesti pozitionarea sa il pozitionezi la dreapta de linia verticala -->
+                <div class="black-box text-center">
                     <h2>go.arch</h2>
                     <div class="font-awesome">
                        <div class="border"></div>
@@ -31,99 +31,89 @@
                        <i class="fab fa-facebook-f"></i>
                     </div>
                 </div>  
-                <h1>PROJECTS</h1>
+                <h1 class="text-white">PROJECTS</h1>
             </header>
+            <div class="layer-wrapper" id="layer"></div>
             <div class="content">
-                <div class="gallery-wrapper">
-                    <img src="assets/concert-hall.jpg">
-                    <!-- daca te uiti in layout  locatia este pe un rand separat, nu in continuarea descrierii -->
-                    <!--am observat ulterior, dar nu reusesc nici cum sa le aranjez
-                         fara sa imi afectez ori partea de desktop ori partea de mobile-->
-                    <p>CONCERT HALL <span>IN NEW YORK</span></p>
+                <div class="row">
+                <div class="gallery-wrapper1 col-md-4 col-12">
+                    <p>CONCERT HALL<br><span>IN NEW YORK</span></p>
                     <p>ARCHITECTURE</p>
                 </div>
-                <div class="gallery-wrapper">
-                    <img src="assets/bedroom-1.jpg">
-                    <p>MODERN BEDROOM <span>IN GORIZIA</span></p>
+                <div class="gallery-wrapper2 col-md-4 col-12">
+                    <p>MODERN BEDROOM <br><span>IN GORIZIA</span></p>
                     <p>INTERIOR</p>
                 </div>
-                <div class="gallery-wrapper">
-                    <img src="assets/hotel.jpg">
-                    <p>MODERN HOTEL <span>IN LONDON</span></p>
+                <div class="gallery-wrapper3 col-md-4 col-12">
+                    <p>MODERN HOTEL <br><span>IN LONDON</span></p>
                     <p>ARCHITECTURE</p>
                 </div>
-                <div class="gallery-wrapper">
-                    <img src="assets/bedroom-2.jpg">
-                    <p>MODERN BEDROOM <span>IN PARIS</span></p>
+            </div>
+                <div class="row">
+                <div class="gallery-wrapper4 col-md-4 col-12">
+                    <p>MODERN BEDROOM <br><span>IN PARIS</span></p>
                     <p>INTERIOR</p>
                 </div>
-                <div class="gallery-wrapper">
-                    <img src="assets/library.jpg">
-                    <p>MODERN LIBRARY <span>IN CHICAGO</span></p>
+                <div class="gallery-wrapper5 col-md-4 col-12">
+                    <p>MODERN LIBRARY <br><span>IN CHICAGO</span></p>
                     <p>ARCHITECTURE</p>
                 </div>
-                <div class="gallery-wrapper">
-                    <img src="assets/kitchen.jpg">
-                    <p>MODERN KITCHEN <span>IN BUCHAREST</span></p>
+                <div class="gallery-wrapper6 col-md-4 col-12">
+                    <p>MODERN KITCHEN <br><span>IN BUCHAREST</span></p>
                     <p>INTERIOR</p>
                 </div>
             </div>
-            <footer>
+            </div>
+            <footer class="text-center text-white">
                 <button type="button">MORE PROJECTS</button>
-                <!-- <string>? avem documentatie pentru tagul asta? inline CSS? -->
-                <!-- puteai sa optezi pentru un span aici sa izolezi doar cuvantul asta -->
-                <!--la span ma gandeam, nu stiu ce aveam in minte de am pus string-->
                 <p><span style="color:white">GET</span> IN TOUCH</p>
-                <!-- se strica layout-ul, ti-am atasat screenshot sa vezi ce se intampla la mine -->
                 <div class="contact">
-                        <!-- nu avem un form pt fiecare input sau buton, ci un un singur for pentru toate valorile ce vor fi trimise la server ulterior -->
                         <form>
-                            <!-- ceea ce vezi tu in layout e un placeholder, nu un label. label-ul e ok sa il pui pt accesibilitate, dare trebuie ascuns cu display: none in css -->
-                           <div class="part1">
-                            <input type="text" id="name" placeholder="Name">                      
-                            <input type="text" id="phone" placeholder="Phone">
-                            <input type="email" id="email" placeholder="Email"> 
-                            <input type="text" id="company" placeholder="Company">
-                        </div>
-                            <input type="text" id="message" placeholder="Message">
+                           <div class="form-row justify-content-center col-12">   
+                                    <div class="part1 form-row justify-content-center">
+                                      <input class="col-lg-4 col-12 form-control" type="text" id="name" placeholder="Name">                      
+                                      <input class="col-lg-4 col-12 form-control" type="text" id="phone" placeholder="Phone">
+                                      <input class="col-lg-4 col-12 form-control" type="email" id="email" placeholder="Email"> 
+                                      <input class="col-lg-4 col-12 form-control" type="text" id="company" placeholder="Company">
+                                    </div>
+                                    <div class="part2 form-row justify-content-center">
+                                      <textarea class="col-12 col-lg-8 form-control" type="text" id="message" placeholder="Message" row="2"></textarea> 
+                                    </div>
+                           </div>
+                           <!--imi dai te rog un sfat cum pot seta ca in momentul in care 
+                              micsorez ecranul sa mi se mute SUBMIT-ul in partea dreapta ca in layout?-->
+                            <div class="send form-row justify-content-center">
+                                <input class="col-lg-2 col-4" type="submit" value="SEND">
+                           </div>
                         </form>
                 </div>
-                <!-- inca un form? butonul trebuie sa faca parte din singurul form care ar trebuie sa il ai pe pagina. de el te vei lega sa trimiti datele. daca le ai separate, cu al 2 lea ce anume trimiti? iar cu primul cum trimiti? -->
-                <form class="send">
-                    <input type="submit" value="SEND">
-                </form>
             </footer>
         </div>
 
-        <!-- mare atentie la identatie, te rog -->
-        <section id="MobileMenu" class="hidden">
-            <div class="mobile-menu">
+        
+        <section id="mobileMenu" class="hidden mobile-menu">
+            <div class="mobile-menu1 container">
                 <div class="top-menu">
                     <h2>go.arch</h2>
-                    <!-- sectiunile sunt menite sa contina sectiuni amble de layout, o simpla iconita sau button nu este deloc continut amplu, un simplu div ajungea -->
-                    <section id="CloseButton">
-                        <div class="close-button">
+                    <div class="close-button" id="closeButton">
                             <img src="assets/icon-close.png" alt="close">
-                        </div>
                     </div>
-                    <!-- aici are sens sa fie un nav, nicidecum un section -->
-                    <section>
+                </div>
+                <nav>
                         <a href="#">Home</a>
                         <a href="#">About us</a>
                         <a href="#">Projects</a>
                         <a href="#">Blog</a>
                         <a href="#">Contact us</a>
-                    </section>
-                    <!-- layout folosind table? de ce? cand un simplu flex sau inline-block ti-ar rezolva problema -->
-                    <!-- pe langa asta nu este pozitionat in josul paginii, recomand tehnica absolut fata de parinte relativ -->
-                    <table>
-                        <th>
-                        <i class="fab fa-instagram-square"></i>
-                        </th>
-                        <th>
-                        <i class="fab fa-facebook-f"></i>
-                        </th>           
-                    </table>
+                </nav>
+                <div class="social-media row align-items-end">
+                    <div class="instagram-wrapper col-6 text-center">
+                            <a><i class="fab fa-instagram-square"></i></a> 
+                    </div>
+                    <div class="facebook-wrapper col-6 text-center">
+                            <a><i class="fab fa-facebook-f"></i></a> 
+                    </div>               
+                </div>
             </div>
         </section>
     <script src="resources/index.js"></script>

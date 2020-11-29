@@ -6,28 +6,27 @@ html, body {width:100%;
              position: relative;}
 .container {width:100%;
             height:auto;
-            font-family:"Open Sans,Skia",sans-serif;
-            position:relative;
-            }
-header {background-image: url(../assets/bg-header.jpg);
+             margin:0;
+            padding:0;
+             }
+header {width:100%;
+       height:350px;
+         background-image: url(../assets/bg-header.jpg);
         background-repeat: no-repeat;
-        background-size:cover;
-         width:100%;
-          height:350px;
-          position: relative;}
+        background-size:cover; 
+          position: relative;
+       }
 .black-box {background-color: #2b2b2b;
            width:20%;
            font-size:20px;
            padding:20px;
            color:#3d3d3d;
-           text-align: center;
            position:relative;}
 .black-box h2 {position: absolute;
            top:10px;
            right:30px;
            }
 header h1 { position: absolute;
-            color:white;
             padding:50px;
             font-size:50px;
             letter-spacing: 10px;
@@ -46,111 +45,119 @@ header h1 { position: absolute;
          transform:rotate(90deg);
          margin-bottom: 20px;
          }
- nav  {width:80%;
+header nav  {width:80%;
       height:auto;
        float: right;
      text-align: center;
       margin-top:20px;
       position: relative;}
-nav a {text-decoration: none;
+header nav a {text-decoration: none;
       color:white;
       margin-right:30px;
       font-size:20px;
-       }
+       cursor: pointer;}
+header nav a:hover {text-decoration: none;
+                    color:white;}
 .menu i {color:#3d3d3d;
        font-size:30px;
         position: absolute;
         top:10px;
         right:20px;
          display: none;}
-.content {width:100%;
-          height:100%;
-          display: flex;
-          flex-wrap: wrap;
-          position: relative;
-          margin:0}
-.gallery-wrapper {width:33.3%;
-                  height:500px;
-                  position: relative;
+.layer-wrapper {width:100%;
+                height:1000px;
+                position: absolute;
+                background-color:grey;
+                opacity: 0.3;
+                top:350px;
+                left:0;
+                right:0;
+                z-index:4;
+                }
+
+div[class*="gallery-wrapper"]
+{width:33.3%;
+height:500px;
+position: relative;
+background-repeat: no-repeat;
+background-size:cover;
+background-position:center;
+}
+
+.gallery-wrapper1 {background-image: url(../assets/concert-hall.jpg);
                   }
- /*aici nu stiu cum sa fac sa fie imaginea mai stearsa si sa se vada textul mai proeminent*/
- /* putem pune un layer deasupra la care sa ii dam un opacity de 0.3, 0.5, dar avem nevoie si de z-index si de pozitionare sa fie exact una deasupra celeilalte */
-.gallery-wrapper img {width:100%;
-                      height:100%;
-                      opacity:0.7;
-                      }
-.gallery-wrapper p:first-of-type {position: absolute;
+.gallery-wrapper2 {background-image: url(../assets/bedroom-1.jpg);}
+.gallery-wrapper3 {background-image: url(../assets/hotel.jpg);}
+.gallery-wrapper4 {background-image: url(../assets/bedroom-2.jpg);}
+.gallery-wrapper5 {background-image: url(../assets/library.jpg);}
+.gallery-wrapper6 {background-image: url(../assets/kitchen.jpg);}
+div[class*="gallery-wrapper"] p:first-of-type {position: absolute;
                     top:5px;
                      color:white;
                      padding-left:20px;
                     font-size: 18px;
                      font-size:25px;
-                     }
+                     z-index:10}
 
-.gallery-wrapper p:nth-of-type(2) 
+div[class*="gallery-wrapper"] p:nth-of-type(2) 
     {position: absolute;
     color:white;
     bottom:30px;
     padding-bottom:30px;
     margin-bottom: 30px;
     transform:rotate(-90deg);
-    font-size:18px;}
+    font-size:18px;
+    z-index:10}
 footer {background-color: #2b2b2b;
-        color:white;
-        text-align:center;
         }
-.contact {margin:0 0 0 30px;
-         }
-.contact form {display: flex;
-               justify-content: center;}
-.contact input {background-color: transparent;
-               border:none;
-               background-color: #3d3d3d;
-               margin:10px 10px 10px 10px;
-              padding:20px;
-              width:220px;
-              font-size:18px;
-              }
-.part1 {width:50%;
-       }
-footer p {font-size:50px;
-             color:#c09c78;
-              text-align: center;}
 footer button {color:white;
+              background-color: #3d3d3d;
+              border-radius: 10px;
+              padding:10px 20px;
+              border:none;
+             margin:40px 0;
+              font-size:18px}
+footer p {font-size:50px;
+                     color:#c09c78;
+                      text-align: center;}
+.part1 {width:50%;
+}
+.part2 {width:40%;}
+.contact input,
+.contact textarea {background-color: transparent;
+                border:none;
                background-color: #3d3d3d;
-               border-radius: 10px;
-               padding:10px 20px;
-               border:none;
-              margin:40px 0;
-               font-size:18px}
+               margin:10px;
+              width:220px;
+              font-size:18px;}
 .send input{color:white;
        background-color: #c09c78;
-       padding:10px 40px;
-       margin:40px 0;
         border-radius: 10px;
-        border:none;
-        font-size:18px}
+       }
 .mobile-menu {display:none;
               }
 @media (max-width:599px){
-      nav a {display: none;}
-      .menu i{display: block;
-              cursor: pointer;}
-      .black-box {width:40%}
-      .black-box h2 {margin-left:10px;
+header nav a {display: none;}
+.menu i{display: block;
+cursor: pointer;}
+.black-box {width:40%}
+.black-box h2 {margin-left:10px;
                     }
-      header h1 {bottom:5px;
+ header h1 {bottom:5px;
                  padding:0;
                  left:15%}
-      .gallery-wrapper {width:100%}
-      .gallery-wrapper p:first-of-type {text-align: center;
+.layer-wrapper {
+       top:350px;
+       height:3000px;
+}
+div[class*="gallery-wrapper"] p:first-of-type {text-align: center;
                                         top:30%;
                                         right:0;
                                         left:0;
                                         font-size:28px;
                                         width:100%;}
-      .gallery-wrapper span{color:#c09c78}
-      .gallery-wrapper p:nth-of-type(2) {width:100%;
+div[class*="gallery-wrapper"] span{color:#c09c78}
+div[class*="gallery-wrapper"] p:nth-of-type(2) {width:100%;
                                          text-align: center;
                                          font-size:26px;
                                          transform:rotate(0);
@@ -158,57 +165,65 @@ footer button {color:white;
                                          margin:0;
                                          top:50%;
                                     }
-      footer {text-align: right;
-             }
-      footer button {display:none}
-      footer p {margin:0 0 20px 0;
-               padding-top:40px;
-               }
-        .contact {margin:0 20px}
-      .contact form {width:100%;
-                    margin:10px 0px;
-                    flex-direction: column;}
-      .contact input {width:100%;
-                      margin:10px 0}
-      .part1 {width:100%;
+footer {width:100%;
+       text-align: right;
+        }
+footer button {display:none}
+footer p {margin:0 0 20px 0;
+        padding-top:40px;
+}
+
+.contact input {width:100%;
+              margin:10px 0}
+.part1 {width:100%;
               }
-      .send input {margin-right:20px}
-      .mobile-menu    { display:block;
-                    position: absolute;
-                   width:100%;
-                     height:100%;
-                     background-color: #2b2b2b;
-                    color:white;
-                     top:0;
-                     z-index:2}
-       .close-button {width:50px;
-                      height:50px;
-                     position: absolute;
-                      top:10px;
-                     right:20px}
-       .close-button img {width:100%;
-                          height:auto;
-                          cursor: pointer;}
-       .top-menu h2 {margin-left:20px}
-       .mobile-menu section {display: flex;
-                             flex-direction: column;
-                             font-size:30px;
-                              padding:20px}
-       .mobile-menu section a {text-decoration: none;
-                               color:#3d3d3d;
-                               margin-bottom: 10px;}
-       .mobile-menu section a:hover {color: white;}
-       table, th {width:100%;
-                  height:auto;
-                   border:1px solid #3d3d3d;
-                   border-collapse: collapse;
-                   padding:40px;
-                   background-color: #2b2b2b;}
-       table th {width:50%}
-       table i {font-size:25px;
-              color:#3d3d3d;
-              }
-       .hidden {display:none;}
+.part2 {width:100%;
+}
+.mobile-menu    
+{ display:block;
+position: absolute;
+ width:100%;
+  height:100%;
+background-color: #2b2b2b;
+color:white;
+top:0;
+z-index:2;
+margin:0;
+padding:0;}
+.mobile-menu1{position: relative;}
+.close-button 
+{width:30px;
+height:30px;
+position: absolute;
+top:10px;
+right:20px}
+.close-button img 
+{width:100%;
+height:auto;
+cursor: pointer;}
+.top-menu h2 {margin-left:20px}
+.mobile-menu nav 
+{display: flex;
+flex-direction: column;
+font-size:30px;
+padding:20px}
+.mobile-menu nav a 
+{text-decoration: none;
+color:#3d3d3d;
+margin-bottom: 10px;}
+.mobile-menu nav a:hover {color: white;}
+.social-media {
+background-color: #2b2b2b;
+}
+.social-media i {
+       font-size:40px;
+       color:#3d3d3d;
+       cursor: pointer;}
+.instagram-wrapper,
+.facebook-wrapper {
+       border:1px solid #3d3d3d;
+padding:20px;}
+.hidden {display:none;}
 }
 
 
