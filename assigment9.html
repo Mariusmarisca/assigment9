@@ -10,6 +10,8 @@
         <link rel="stylesheet" type="text/css" href="resources/main.css">
     </head> 
     <body>
+        <!-- ai nevoie de container-fluid, nu container pentru ca vrei sa te intinzi peintreg viewport-ul, nu doar pe parte din el, ce e ceea ce face container -->
+        <!-- alte spatii, margin, padding ce raman poti sa le suprascrii in caz de nevoie -->
         <div class="container" id="container">
             <header>
                 <nav>
@@ -82,6 +84,8 @@
                            </div>
                            <!--imi dai te rog un sfat cum pot seta ca in momentul in care 
                               micsorez ecranul sa mi se mute SUBMIT-ul in partea dreapta ca in layout?-->
+
+                              <!-- il poti alinia la dreapta folosindu-te de clasele offset, doar pentru breakpoint-ul dorit, sm sau xs -->
                             <div class="send form-row justify-content-center">
                                 <input class="col-lg-2 col-4" type="submit" value="SEND">
                            </div>
